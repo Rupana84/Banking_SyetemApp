@@ -134,12 +134,12 @@ It serves as a strong portfolio item showing both **frontend** and **backend log
 
 ---
 
-# 📄 License  
+#  License  
 This project is free to use for learning and portfolio purposes.
 
 ---
 
-# 🙋‍♂️ Author  
+#  Author  
 **Gurpreet Singh Rupana**  
 Software Developer — Sweden  
 GitHub: https://github.com/Rupana84  
