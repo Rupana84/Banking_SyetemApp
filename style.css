@@ -1,0 +1,297 @@
+:root {
+  --bg: radial-gradient(circle at top, #1b2b3f 0, #050608 55%, #020208 100%);
+  --card-bg: rgba(13, 20, 34, 0.95);
+  --card-border: rgba(255, 255, 255, 0.04);
+  --text: #f5f7ff;
+  --muted: #9ea7c3;
+  --accent: #4f8cff;
+  --accent-soft: rgba(79, 140, 255, 0.2);
+  --green: #3ddc84;
+  --green-soft: rgba(61, 220, 132, 0.1);
+  --red: #ff5a5f;
+  --red-soft: rgba(255, 90, 95, 0.1);
+  --orange: #ff8b3d;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "SF Pro Text",
+    "Segoe UI", sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page {
+  width: 100%;
+  max-width: 900px;
+  padding: 40px 16px;
+}
+
+.title-area {
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.title-area h1 {
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  font-size: 26px;
+}
+
+.title-area p {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* Card */
+
+.card {
+  max-width: 480px;
+  margin: 0 auto;
+  background: var(--card-bg);
+  border-radius: 24px;
+  padding: 24px 24px 20px;
+  border: 1px solid var(--card-border);
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(24px);
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.card-title {
+  margin: 0;
+  font-size: 20px;
+}
+
+.card-subtitle {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* Tabs for login/register */
+
+.tabs {
+  display: inline-flex;
+  padding: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.03);
+  margin-top: 16px;
+  margin-bottom: 12px;
+}
+
+.tab-button {
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  padding: 6px 16px;
+  border-radius: 999px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.tab-button.active {
+  background: var(--accent-soft);
+  color: var(--text);
+}
+
+/* Forms */
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.auth-form label {
+  font-size: 13px;
+  color: var(--muted);
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  background: rgba(10, 15, 27, 0.9);
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 8px 14px;
+  color: var(--text);
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease,
+    background 0.18s ease;
+}
+
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent-soft);
+}
+
+/* Buttons */
+
+.primary-btn,
+.pill-btn,
+.ghost-btn {
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 8px 16px;
+  transition: transform 0.08s ease, box-shadow 0.08s ease,
+    background 0.18s ease, color 0.18s ease;
+}
+
+.primary-btn {
+  margin-top: 6px;
+  background: linear-gradient(135deg, #4f8cff, #6d5dfc);
+  color: white;
+  box-shadow: 0 12px 30px rgba(79, 140, 255, 0.4);
+}
+
+.primary-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 36px rgba(79, 140, 255, 0.5);
+}
+
+.ghost-btn {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: var(--muted);
+  font-size: 12px;
+  padding: 6px 14px;
+}
+
+.ghost-btn:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.button-row {
+  margin-top: 16px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.pill-btn {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+}
+
+.pill-btn.success {
+  background: var(--green-soft);
+  color: var(--green);
+}
+
+.pill-btn.danger {
+  background: var(--red-soft);
+  color: var(--red);
+}
+
+.pill-btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Balance panel */
+
+.balance-panel {
+  margin-top: 18px;
+  padding: 16px 18px;
+  border-radius: 18px;
+  border: 1px dashed rgba(255, 255, 255, 0.12);
+  background: radial-gradient(circle at top left, #101a2f, #050813);
+}
+
+.balance-label {
+  font-size: 12px;
+  color: var(--muted);
+  margin: 0 0 6px;
+}
+
+.balance-value {
+  margin: 0;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--green);
+}
+
+/* Amount input row */
+
+.amount-row {
+  margin-top: 16px;
+}
+
+.amount-label {
+  font-size: 13px;
+  color: var(--muted);
+  margin-bottom: 4px;
+}
+
+.amount-input {
+  width: 100%;
+}
+
+.amount-hint {
+  margin: 4px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+/* Helper / messages */
+
+.helper-text {
+  margin-top: 14px;
+  font-size: 11px;
+  color: var(--muted);
+}
+
+.error {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--red);
+}
+
+.success {
+  margin-top: 6px;
+  font-size: 12px;
+  color: var(--green);
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive */
+
+@media (max-width: 540px) {
+  .card {
+    padding: 20px 18px 18px;
+  }
+
+  .title-area h1 {
+    font-size: 22px;
+  }
+}
