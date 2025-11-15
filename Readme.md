@@ -125,6 +125,11 @@ It serves as a strong portfolio item showing both **frontend** and **backend log
 
 #  Screenshots
 
+![Image 2025-11-15 at 23 34](https://github.com/user-attachments/assets/7c35a0cd-bca0-44bf-9140-f122c8410ab8)
+
+
+![Image 2025-11-15 at 23 37](https://github.com/user-attachments/assets/7300d6f7-b14d-46e4-a68e-7f9a231213f6)
+
 
 
 ---
